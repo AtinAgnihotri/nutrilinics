@@ -37,9 +37,25 @@ function App() {
               Welcome to Nutrilinic diets. This site is currently under
               construction.
               <br />
-              In the meanwhile, please reach out to nutrilinicdiets@gmail.com
-              or+91-9315555603 on whatsapp
+              In the meanwhile, please reach out to us on the following:
             </p>
+            <div className="items-center sm:items-start">
+              <a href="tel:+919315555603" className="btn btn-accent mr-4 mb-4">
+                Call Us
+              </a>
+              <a
+                href="mailto:nutrilinicdiets@gmail.com"
+                className="btn btn-accent mr-4 mb-4"
+              >
+                Mail Us
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=9315555603"
+                className="btn btn-accent mb-4"
+              >
+                Send a Message on Whatsapp
+              </a>
+            </div>
           </div>
           {/* <Modal /> */}
         </div>
