@@ -1,6 +1,6 @@
-import dietBackground from "./assets/diet_background.jpg";
+// import dietBackground from "./assets/diet_background.jpg";
 import mummaImage from "./assets/mumma_image.jpg";
-import Modal from "./components/modal.tsx";
+// import Modal from "./components/modal.tsx";
 
 function App() {
   return (
@@ -41,6 +41,7 @@ function App() {
               or+91-9315555603 on whatsapp
             </p>
           </div>
+          {/* <Modal /> */}
         </div>
       </div>
     </div>

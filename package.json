@@ -3,9 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://AtinAgnihotri.github.io/nutrilinics",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "predeploy": "tsc && vite build --base=./",
+    "deploy": "gh-pages -d dist",
+    "build": "tsc && vite build --base=./",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "clean": "rm -rf node_modules/ && yarn"
