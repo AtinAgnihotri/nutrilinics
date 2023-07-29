@@ -2,9 +2,17 @@ type TSlide = {
   index: number;
   children: React.ReactNode;
   lastIndex?: number;
+  onLeftClick: () => void;
+  onRightClick: () => void;
 };
 
-const Slide = ({ index, children, lastIndex }: TSlide) => {
+const Slide = ({
+  index,
+  children,
+  lastIndex,
+  onLeftClick,
+  onRightClick,
+}: TSlide) => {
   const id = `slide${index}`;
   const left = `#slide${lastIndex ? lastIndex : index - 1}`;
   const right = `#slide${lastIndex === index ? 1 : index + 1}`;
@@ -15,12 +23,12 @@ const Slide = ({ index, children, lastIndex }: TSlide) => {
     >
       <div className=" ">{children}</div>
       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 lg:left-80 right-5 lg:right-80 top-1/2">
-        <a href={left} className="btn btn-circle">
+        <button className="btn btn-circle" onClick={onLeftClick}>
           {"❮"}
-        </a>
-        <a href={right} className="btn btn-circle">
+        </button>
+        <button className="btn btn-circle" onClick={onRightClick}>
           {"❯"}
-        </a>
+        </button>
       </div>
     </div>
   );

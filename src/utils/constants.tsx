@@ -13,3 +13,5 @@ export const SLIDES: React.ReactNode[] = [
   <img src={tNatasha} className="max-h-[300px] rounded-lg shadow-2xl" />,
   <img src={tClient} className="max-h-[300px] rounded-lg shadow-2xl" />,
 ];
+
+export const DEFAULT_CAROUSEL_SCROLL_TIME = 4000;
