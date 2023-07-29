@@ -1,21 +1,12 @@
 type TSlide = {
   index: number;
   children: React.ReactNode;
-  lastIndex?: number;
   onLeftClick: () => void;
   onRightClick: () => void;
 };
 
-const Slide = ({
-  index,
-  children,
-  lastIndex,
-  onLeftClick,
-  onRightClick,
-}: TSlide) => {
+const Slide = ({ index, children, onLeftClick, onRightClick }: TSlide) => {
   const id = `slide${index}`;
-  const left = `#slide${lastIndex ? lastIndex : index - 1}`;
-  const right = `#slide${lastIndex === index ? 1 : index + 1}`;
   return (
     <div
       id={id}

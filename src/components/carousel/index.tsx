@@ -28,7 +28,7 @@ const Carousel = ({ slides, scrollTime }: TCarousel) => {
       clearInterval(interval);
       console.log("This hit 2");
     };
-  }, [slideIndex, lastIndex]);
+  }, [slideIndex, lastIndex, scrollToIndex]);
 
   return (
     <div
@@ -39,9 +39,6 @@ const Carousel = ({ slides, scrollTime }: TCarousel) => {
         return (
           <Slide
             index={index}
-            lastIndex={
-              index === 0 || index === lastIndex ? lastIndex : undefined
-            }
             key={`slide-${index}`}
             onLeftClick={() => {
               const newIndex = index === 0 ? lastIndex : index - 1;
